@@ -23,6 +23,7 @@ const Event = (props) => {
           console.error(err);
       })
   }
+
   const handleRemovalChange = (e) => {
     setGoing(e.target.checked);
     axios.delete('/api/eventListings/')
@@ -51,8 +52,9 @@ const Event = (props) => {
   }
 
 
+
  return (
-    
+
       <div>
         <div>-------------------------------------------</div>
         <h4>Type of Event: </h4>

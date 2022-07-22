@@ -93,48 +93,6 @@ const CreateEvents = () => {
       });
   }
 
-  const [going, setGoing] = useState(false);
-
-  const setStatus = () => {
-    axios.get('/api/event', {
-      params: {
-        id: '62dad38eed31727feb260bbb'
-      }
-    })
-    .then((event) => {
-      if (event.data.attendees.includes(context._id)){
-        setGoing(true)
-      } else {
-        setGoing(false)
-      }
-    })
-    .catch((err) => console.error(err))
-  }
-  useEffect(() => {
-    setStatus();
-  })
-
-
-
-  const handleToggle = () => {
-    console.log('toggled');
-    axios.get('/api/event', {
-      params: {
-        id: '62dad38eed31727feb260bbb'
-      }
-    }).then((event) => {
-      axios.put('/api/event', {
-        id: event.data._id,
-        going,
-        userId: context._id
-        
-      }).then((data) => console.log(data))
-      .catch((err) => console.error(err));
-    })
-    .then(() => setGoing(going => !going))
-
-  }
-
   const handleEquipmentList = () => {
     setEquipment([...equipment, item]);
     setItem('');
@@ -263,9 +221,7 @@ const CreateEvents = () => {
 
   return (
     <div>
-      <FormGroup>
-        <FormControlLabel control={<Switch checked={going} color="success" onChange={ handleToggle }/>}/>
-      </FormGroup>
+
       <ThemeProvider theme={theme}>
       <Typography
         style={{color: '#172e36'}}

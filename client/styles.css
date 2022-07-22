@@ -1,6 +1,6 @@
 body {
   width: auto;
-  background-color: #76557c;
+  background-color: #395B64;
   color: white;
 }
 
@@ -8,7 +8,7 @@ body {
   max-width: 700px;
   margin: auto;
   padding: 20px;
-  background-color: #1c1c1c;
+  background-color: #2C3333;
 }
 
 #text {
@@ -22,7 +22,7 @@ body {
 .mapboxgl-popup {
   max-width: 400px;
   font: 12px/20px 'Roboto';
-  background-color: #CE93D8;
+  background-color: #a373ab;
 }
 
 .mapboxgl-popup-content {
@@ -104,6 +104,15 @@ body {
     font-family: 'Roboto', arial, sans-serif;
   }
 
+  .card-text {
+    color: black;
+  }
+
+  .card {
+    background-color: #A5C9CA;
+    margin: 20px;
+    padding: 20px;
+  }
   .event {
     margin: 10px;
     background-color: #737373;

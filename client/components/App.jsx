@@ -13,7 +13,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import axios from 'axios';
-
+import { purple } from '@mui/material/colors';
 const theme = createTheme({
   components: {
     MuiTypography: {
@@ -76,11 +76,11 @@ const App = () => {
             </Grid>
           <Typography align="center" variant="h2" component="h2" >Game<strong><SportsBasketballIcon sx={{ fontSize: 50 }}/>N</strong></Typography>
           <Grid container spacing={6} align="center" margin="auto">
-          <Grid xs={2}><Link to="/home" style={linkStyle}>{<Tab icon={<HomeIcon />} label='HOME'/>}</Link> </Grid>
-          <Grid xs={2}><Link to="/eventListings" style={linkStyle}>{<Tab icon={<SportsFootballIcon />} label='GAMES'/>}</Link></Grid>
-          <Grid xs={2}><Link to="/map" style={linkStyle}>{<Tab icon={<MapOutlinedIcon />} label='MAP'/>}</Link></Grid>
-          <Grid xs={2}><Link to="/postEvent" style={linkStyle}>{<Tab icon={<AddCircleIcon />} label='POST'/>}</Link></Grid>
-          <Grid xs={2}><Link to="/profile" style={linkStyle}>{<Tab icon={<AccountCircleIcon />} label='PROFILE' />}</Link></Grid>
+          <Grid xs={2}><Link to="/home" style={linkStyle}>{<Tab icon={<HomeIcon sx={{ color: purple[200] }} />} label='HOME'/>}</Link> </Grid>
+          <Grid xs={2}><Link to="/eventListings" style={linkStyle}>{<Tab icon={<SportsFootballIcon sx={{ color: purple[200] }}/>} label='GAMES'/>}</Link></Grid>
+          <Grid xs={2}><Link to="/map" style={linkStyle}>{<Tab icon={<MapOutlinedIcon sx={{ color: purple[200] }}/>} label='MAP'/>}</Link></Grid>
+          <Grid xs={2}><Link to="/postEvent" style={linkStyle}>{<Tab icon={<AddCircleIcon sx={{ color: purple[200] }}/>} label='POST'/>}</Link></Grid>
+          <Grid xs={2}><Link to="/profile" style={linkStyle}>{<Tab icon={<AccountCircleIcon sx={{ color: purple[200] }}/>} label='PROFILE' />}</Link></Grid>
           </Grid>
           <Outlet/>
           <Typography><p align="center">Game<strong><SportsBasketballIcon sx={{ fontSize: 15 }}/>N</strong>: Your go-to app for local pickup games.</p></Typography>

@@ -5,10 +5,16 @@ body {
 }
 
 .app-body {
+  margin-top: 50px;
   max-width: 700px;
   margin: auto;
   padding: 20px;
   background-color: #2C3333;
+}
+
+.MuiTypography-body1 {
+  color: #9e5caa;
+  border: "1px solid black",
 }
 
 #text {
@@ -67,6 +73,8 @@ body {
     display:block;
     width:fit-content;
     margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
   }
 
   .google-button:hover,
@@ -84,7 +92,6 @@ body {
 
   .google-button__icon {
     display: inline-block;
-    vertical-align: middle;
     margin: 0px 0 0px 8px;
     width: 18px;
     height: 18px;
@@ -110,7 +117,10 @@ body {
 
   .card {
     background-color: #A5C9CA;
-    margin: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 20px;
   }
   .event {

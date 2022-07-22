@@ -10,6 +10,10 @@ import { UserContext} from '../index';
 // import Button from '@mui/material/Button';
 // import OutlinedInput from '@mui/material/OutlinedInput'
 // import { createTheme, ThemeProvider} from '@mui/material/styles';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+
 import { Typography, Button, Fab, OutlinedInput, createTheme, ThemeProvider} from '@mui/material';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 // import { DateRangePicker } from '@mui/x-date-pickers-pro/DateRangePicker'
@@ -87,6 +91,48 @@ const CreateEvents = () => {
       .catch((err) => {
         console.error(err);
       });
+  }
+
+  const [going, setGoing] = useState(false);
+
+  const setStatus = () => {
+    axios.get('/api/event', {
+      params: {
+        id: '62dad38eed31727feb260bbb'
+      }
+    })
+    .then((event) => {
+      if (event.data.attendees.includes(context._id)){
+        setGoing(true)
+      } else {
+        setGoing(false)
+      }
+    })
+    .catch((err) => console.error(err))
+  }
+  useEffect(() => {
+    setStatus();
+  })
+
+
+
+  const handleToggle = () => {
+    console.log('toggled');
+    axios.get('/api/event', {
+      params: {
+        id: '62dad38eed31727feb260bbb'
+      }
+    }).then((event) => {
+      axios.put('/api/event', {
+        id: event.data._id,
+        going,
+        userId: context._id
+        
+      }).then((data) => console.log(data))
+      .catch((err) => console.error(err));
+    })
+    .then(() => setGoing(going => !going))
+
   }
 
   const handleEquipmentList = () => {
@@ -217,6 +263,9 @@ const CreateEvents = () => {
 
   return (
     <div>
+      <FormGroup>
+        <FormControlLabel control={<Switch checked={going} color="success" onChange={ handleToggle }/>}/>
+      </FormGroup>
       <ThemeProvider theme={theme}>
       <Typography
         style={{color: '#172e36'}}

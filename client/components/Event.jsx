@@ -8,6 +8,7 @@ import axios from 'axios';
 import { createTheme, ThemeProvider} from '@mui/material';
 import Typography from '@mui/material/Typography';
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
+
 import SportsRugbyIcon from '@mui/icons-material/SportsRugby';
 import SportsBaseballIcon from '@mui/icons-material/SportsBaseball';
 import SportsTennisIcon from '@mui/icons-material/SportsTennis';
@@ -19,6 +20,7 @@ import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import SportsFootballIcon from '@mui/icons-material/SportsFootball';
 import AlbumIcon from '@mui/icons-material/Album';
 import BlurCircularIcon from '@mui/icons-material/BlurCircular';
+
 const theme = createTheme({
   palette: {
     primary: {

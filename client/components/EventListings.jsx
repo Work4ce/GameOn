@@ -16,9 +16,6 @@ const EventListings = (props) => {
   let [searchParams, setSearchParams] = useSearchParams();
   const param = searchParams.get("user");
   console.log(param);
-const getFilteredEvents = () => {
-    axios.get()
-}
   
 const getAllEvents = () => {
       axios.get('/api/eventListings')

@@ -20,8 +20,6 @@ import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import SportsFootballIcon from '@mui/icons-material/SportsFootball';
 import AlbumIcon from '@mui/icons-material/Album';
 import BlurCircularIcon from '@mui/icons-material/BlurCircular';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-
 
 const theme = createTheme({
   palette: {
@@ -48,7 +46,6 @@ const Event = (props) => {
         id: props.eventData._id
       }
     })
-
     .then((event) => {
       if (event.data.attendees.includes(context._id)){
         setGoing(true)
@@ -88,15 +85,8 @@ const Event = (props) => {
        <p class="card-text"><CalendarMonthIcon sx={{ color: black }} /> {new Date(props.eventData.date.substring(0, 10)).toDateString()} | {props.eventData.time}</p> 
        <p class="card-text"><LocationOnIcon sx={{ color: black }} />{props.eventData.address}</p>
        <FormGroup>
-         <FormControlLabel
-          control={<Switch checked={going} color='primary' onChange={handleToggle}/>}
-          label=
-            {going
-              ? <div style={{color: 'green', fontWeight: 'bolder'}}> GOING <CheckCircleOutlineIcon/></div>
-              : <div style={{color: '#395B64', fontWeight: 'bolder'}}>RSVP?</div>}
-        />
+         <FormControlLabel control={<Switch checked={going} color='primary' onChange={handleToggle}/>} style={{fontWeight: 'bolder'}}label="RSVP"/>
        </FormGroup>
-
     </div>
       </ThemeProvider>
   );

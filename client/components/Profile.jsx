@@ -84,7 +84,9 @@ const Profile = () => {
       .catch(() => console.log(err => console.error(err)));
   };
 
+
   
+
 
   useEffect(() => {
     if (user) {
@@ -193,5 +195,6 @@ const Profile = () => {
     )
   }
 }
+
 
 export default Profile;

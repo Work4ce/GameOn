@@ -149,6 +149,7 @@ const Profile = () => {
               <Accordion onChange={handleChange('panel1')}>
                 <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
                   <Typography>{event.catName + ' | Date: ' + event.date.substring(0, 10)}</Typography>
+
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>

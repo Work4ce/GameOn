@@ -1,7 +1,8 @@
- <h2 align='center'>GAME ON</h2>
- 
- ---
+ <h1 align='left'>GAME ON</h2>
+---
+DESCRIPTION
 
+---
  <h2 align='left'>HOW TO START THE APP</h2>
 
 ---
@@ -28,7 +29,13 @@ In your .env file, add the following environment variables:
   - EXPRESS_SECRET= 
   - DB_URI= your MongoDB connection string
 
+---
+ <h2 align='left'>DEPLOYMENT WITH AMAZON WEB SERVICES </h2>
 
+ 
+
+---
+This project 
 ---
  <h2 align='left'>INSTRUCTIONS FOR EVENTS LIST (SPORTS DISPLAY) PAGE/COMOPONENTS</h2>
 
@@ -86,5 +93,3 @@ The following are the various bugs we were unable to resolve during the course o
   - https://visgl.github.io/react-map-gl/docs/api-reference/popup
   - https://mui.com/material-ui/material-icons/
   - https://mui.com/material-ui/customization/color/#main-content 
-
-  

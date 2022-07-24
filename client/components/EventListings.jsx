@@ -16,7 +16,7 @@ const EventListings = (props) => {
   let [searchParams, setSearchParams] = useSearchParams();
   const param = searchParams.get("user");
   console.log(param);
-
+// event handler that will send an axios request to the server/index.js file that will filter out the rendered events based off of the sports categor selected
 const handleSelectSport = (e) => {
   axios.get('/api/eventListings')
       .then((eventData) => {
@@ -29,7 +29,7 @@ const handleSelectSport = (e) => {
         console.error(err);
       })
   }
-
+// This is what will grab all of the events from the database and render them onto the screen on the pageload time
 const getAllEvents = () => {
       axios.get('/api/eventListings')
       .then((eventData) => {

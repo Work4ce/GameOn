@@ -1,7 +1,15 @@
- <h2 align='center'>GAME ON</h2>
- 
- ---
+ <h1 align='left'>GAME ON</h2>
 
+ <h2 align='left'>DESCRIPTION</h2>
+
+---
+
+  - GameON is a sports meetup application, that allows you to view sporting events happening in your area. You can create events, by picking from our selection of sports, and setting a data, time, and location. 
+    After an event is created you can navigate over to the sports tab to view all of the events, and either RSVP to specific events that you might be interested in or simple view the ones you created. Once you have events 
+    that you are commited to, you can then view them on the map to see the different event's locations. You also have a profile, via google account, that will list all of your current events, as well as events that you're
+    attending under your google photo. Whether you wanna BLAST a baseballs into space, or SLAM DUNK on the haters in your area, this app will make it easier than ever to organize. 
+
+---
  <h2 align='left'>HOW TO START THE APP</h2>
 
 ---
@@ -28,7 +36,11 @@ In your .env file, add the following environment variables:
   - EXPRESS_SECRET= 
   - DB_URI= your MongoDB connection string
 
+---
+ <h2 align='left'>DEPLOYMENT</h2>
 
+---
+This project 
 ---
  <h2 align='left'>INSTRUCTIONS FOR EVENTS LIST (SPORTS DISPLAY) PAGE/COMOPONENTS</h2>
 

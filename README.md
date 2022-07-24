@@ -16,6 +16,25 @@
 ---
  <h2 align='left'>SETUP YOUR ENVIRONMENT</h2>
 
+
+---
+
+ <h2 align='left'>GOOGLE OAUTH</h2>
+
+- Go to google api console website
+
+- create and name project and give it a name then click create
+
+- go to the project and name your app
+
+- create the OAuth client ID and secret in credentials section of your project
+
+- in Application, choose type: web application. fill in the Authorized JavaScript origins as follows:
+  in authorized javascript origins: http://localhost:3000
+  in authorized redirect URIs: http://localhost:3000/auth/google/callback
+
+- when you receive client ID and client secret, place these values in your .env file
+
 ---
 The current project is configured for use with MongoDB Cloud. You will need to update the DB server files (DB URI) for your specific configuration. 
 
@@ -25,7 +44,7 @@ In your .env file, add the following environment variables:
   - MAP_TOKEN= create a MAPBOX account and create an access token
   - CLIENT_ID=
   - CLIENT_SECRET=
-  - EXPRESS_SECRET= 
+  - EXPRESS_SECRET=
   - DB_URI= your MongoDB connection string
 
 
@@ -38,7 +57,7 @@ The following are the various bugs we were unable to resolve during the course o
 
 <h4 align='left'>PROFILE COMPONENT</h4>
 
-  - Refreshing the profile page breaks the component and throws the error "Rendered more hooks than during the previous render."
+
 
 <h4 align='left'>MAP COMPONENT</h4>
 
